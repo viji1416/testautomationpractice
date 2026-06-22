@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-		git 'Default'
+        git 'Default'
         maven 'Maven_3.9.6'
         jdk 'JDK21'
     }
@@ -26,17 +26,18 @@ pipeline {
             }
         }
 
-        stage('Junit Report') {
+        stage('Reports') {
             steps {
+                // JUnit XML summary
                 junit '**/target/surefire-reports/*.xml'
-            }
-        }
-         stage('HTML Report') {
-            steps {
+
+                // TestNG HTML report
                 publishHTML([
                     reportDir: 'target/surefire-reports',
                     reportFiles: 'index.html',
                     reportName: 'TestNG Report'
                 ])
+            }
+        }
     }
 }
