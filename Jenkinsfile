@@ -26,12 +26,12 @@ pipeline {
             }
         }
 
-        stage('Report') {
+        stage('Junit Report') {
             steps {
                 junit '**/target/surefire-reports/*.xml'
             }
         }
-         stage('Report') {
+         stage('HTML Report') {
             steps {
                 publishHTML([
                     reportDir: 'target/surefire-reports',
