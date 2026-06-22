@@ -1,5 +1,8 @@
 package pageClass;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,6 +37,15 @@ public class TableForm  extends BaseTest{
 	@FindBy(id="female")
 	WebElement gender;
 	
+	@FindBy(id="monday")
+	WebElement day;
+	
+	@FindBy(id="country")
+	WebElement country;
+	
+	@FindBy(id="colors")
+	WebElement colors;
+	
 	
 	public void inputText()
 	{
@@ -42,6 +54,10 @@ public class TableForm  extends BaseTest{
 		passValue(phone,"1234456");
 		passValue(address,"New Street");
 		selectRadioButton(gender);
+		clickOnElement(day);
+		selectDropdown(country,"value","canada");
+		
+		selectMultipleDropdown(colors,Arrays.asList("Red", "Green"));
 	}
 	
 }

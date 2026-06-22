@@ -1,5 +1,7 @@
 package runner;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -11,16 +13,19 @@ import org.testng.annotations.Test;
 
 import pageClass.TableForm;
 import utilities.ConfigReader;
+import utilities.ScreenshotUtils;
 
 
 public class TestClass {
 
 	WebDriver driver;
+	ScreenshotUtils screenshotUtils;
 	
 	@BeforeTest
 	public void setUp()
 	{
 		ConfigReader config=new ConfigReader();
+		
 		String browser=config.getProperty("browser");
 		String url=config.getProperty("url");
 		
@@ -36,6 +41,8 @@ public class TestClass {
 		}
 		driver.manage().window().maximize();
 		driver.get(url);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		screenshotUtils = new ScreenshotUtils(driver);
 	}
 	
 	@Test
@@ -43,6 +50,7 @@ public class TestClass {
 	{
 		TableForm tf=new TableForm(driver);
 		tf.inputText();
+		screenshotUtils.takeScreenshot("FormFilled");
 	}
 	
 	@AfterTest

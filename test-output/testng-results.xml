@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-21T10:10:27 GMT-07:00" name="Suite" finished-at="2026-06-21T10:10:33 GMT-07:00" duration-ms="5959">
+  <suite started-at="2026-06-22T04:26:21 GMT-07:00" name="Suite" finished-at="2026-06-22T04:26:30 GMT-07:00" duration-ms="8342">
     <groups>
     </groups>
-    <test started-at="2026-06-21T10:10:27 GMT-07:00" name="Test" finished-at="2026-06-21T10:10:33 GMT-07:00" duration-ms="5959">
+    <test started-at="2026-06-22T04:26:21 GMT-07:00" name="Test" finished-at="2026-06-22T04:26:30 GMT-07:00" duration-ms="8342">
       <class name="runner.TestClass">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:runner.TestClass@6989da5e]" started-at="2026-06-21T10:10:27 GMT-07:00" name="setUp" finished-at="2026-06-21T10:10:32 GMT-07:00" duration-ms="4795" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:runner.TestClass@6989da5e]" started-at="2026-06-22T04:26:21 GMT-07:00" name="setUp" finished-at="2026-06-22T04:26:27 GMT-07:00" duration-ms="5311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testRunner()[pri:0, instance:runner.TestClass@6989da5e]" started-at="2026-06-21T10:10:32 GMT-07:00" name="testRunner" finished-at="2026-06-21T10:10:33 GMT-07:00" duration-ms="745" status="PASS">
+        <test-method signature="testRunner()[pri:0, instance:runner.TestClass@6989da5e]" started-at="2026-06-22T04:26:27 GMT-07:00" name="testRunner" finished-at="2026-06-22T04:26:29 GMT-07:00" duration-ms="2133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRunner -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:runner.TestClass@6989da5e]" started-at="2026-06-21T10:10:33 GMT-07:00" name="closeBrowser" finished-at="2026-06-21T10:10:33 GMT-07:00" duration-ms="357" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:runner.TestClass@6989da5e]" started-at="2026-06-22T04:26:29 GMT-07:00" name="closeBrowser" finished-at="2026-06-22T04:26:30 GMT-07:00" duration-ms="817" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

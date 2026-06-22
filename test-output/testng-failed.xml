@@ -6,6 +6,7 @@
       <class name="runner.TestClass">
         <methods>
           <include name="setUp"/>
+          <include name="closeBrowser"/>
           <include name="testRunner"/>
         </methods>
       </class> <!-- runner.TestClass -->
