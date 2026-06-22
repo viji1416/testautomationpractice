@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     tools {
+		git 'Default'
         maven 'Maven_3.9.6'
         jdk 'JDK21'
     }
@@ -9,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/viji1416/testautomationpractice.git'
+                git branch: 'master', url: 'https://github.com/viji1416/testautomationpractice.git'
             }
         }
 
